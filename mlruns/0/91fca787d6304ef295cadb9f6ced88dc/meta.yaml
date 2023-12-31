@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Tharindu/OneDrive/Desktop/All/Data%20Science/MLProjects/ML_FLOW/mlruns/0/91fca787d6304ef295cadb9f6ced88dc/artifacts
+end_time: 1704008895726
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 91fca787d6304ef295cadb9f6ced88dc
+run_name: mercurial-conch-893
+run_uuid: 91fca787d6304ef295cadb9f6ced88dc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704008887393
+status: 3
+tags: []
+user_id: Tharindu
