@@ -5,3 +5,5 @@ mlflow
 pyyaml
 from_root
 boto3
+mysql
+pypiwin32

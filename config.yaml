@@ -1,2 +1,9 @@
 params:
   app_name: "mlops-sagemaker"
+  execution_role_arn: ""
+  image_ecr_url: ""
+  region:
+  s3_bucket_name: "mlops-sagemaker-35687"
+  experiment_id: "0"
+  run_id: ""
+  model_name: "model"

@@ -12,7 +12,7 @@ import os
 import mlflow
 import mlflow.sklearn
 from mlflow.models import infer_signature
-from utils.common import upload
+from utils.sagemaker_integration import upload
 
 logging.basicConfig(level=logging.WARN)
 logger = logging.getLogger(__name__)
@@ -53,6 +53,14 @@ if __name__ == "__main__":
     alpha = float(sys.argv[1]) if len(sys.argv) > 1 else 0.5   # take the first argument if there are more than 1 arguments
     l1_ratio = float(sys.argv[2]) if len(sys.argv) > 2 else 0.5  # take the 2 argument if there are more than 2 arguments
 
+
+
+    ### Set the tracking uri
+    uri='http://127.0.0.1:5000'    
+    mlflow.set_tracking_uri(uri)
+
+
+
     with mlflow.start_run():
        lr = ElasticNet(alpha=alpha, l1_ratio=l1_ratio, random_state=42)
        lr.fit(train_x, train_y)
@@ -92,7 +100,7 @@ if __name__ == "__main__":
 
        try:
            if input("push model to s3 (Y or N): ")== 'Y':
-               runs = os.path.join(from_root(),'mlruns/')
+               runs = os.path.join(from_root(),'artifacts/')
                print("Path to ml runs exists:",os.path.exists(runs))
                status = upload(s3_bucket_name='mlops-sagemaker-35687',mlruns_dir=runs)
                print(status)
