@@ -1,9 +1,9 @@
 params:
   app_name: "mlops-sagemaker"
-  execution_role_arn: ""
-  image_ecr_url: ""
-  region:
+  execution_role_arn: "arn:aws:iam::966180364834:role/mlops-sagemaker-role"
+  image_ecr_url: "966180314834.dkr.ecr.ap-south-1.amazonaws.com/mlops-experiment-app-image"
+  region: "ap-south-1"
   s3_bucket_name: "mlops-sagemaker-35687"
   experiment_id: "0"
-  run_id: ""
+  run_id: "8f768d3a7f62412c91b6a9627ef19b39"
   model_name: "model"
